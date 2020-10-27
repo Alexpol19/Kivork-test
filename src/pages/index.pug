@@ -1,0 +1,67 @@
+extends common/layout
+
+block content
+  section#carousel.slider.container-fluid.carousel.slide.px-0(data-ride='carousel', data-interval="1000000")
+    .carousel-inner
+      .carousel-item.active
+        .row
+          .col-12.slider__slide
+            img.d-block(src='img/main-photo-highQuality.jpg' alt='First slide')
+            h2.mb-4 To travel is to live
+            p You Don't Need Magic to Disappear. All you need is a destination.
+            .slider__buttons.text-center.mt-4.mt-sm-5
+              button.btn Show on the map
+              button.btn More info
+      .carousel-item
+        .row
+          .col-12.slider__slide
+            img.d-block(src='img/main-photo-mediumQuality.jpg' alt='Second slide')
+            h2.mb-4 To travel is to live
+            p You Don't Need Magic to Disappear. All you need is a destination.
+            .slider__buttons.text-center.mt-4.mt-sm-5
+              button.btn Show on the map
+              button.btn More info
+      .carousel-item
+        .row
+          .col-12.slider__slide
+            img.d-block(src='img/main-photo-highQuality.jpg' alt='Third slide')
+            h2.mb-4 To travel is to live
+            p You Don't Need Magic to Disappear. All you need is a destination.
+            .slider__buttons.text-center.mt-4.mt-sm-5
+              button.btn Show on the map
+              button.btn More info
+    a.carousel-control-prev(href='#carousel' role='button' data-slide='prev')
+      span.carousel-control-prev-icon(aria-hidden='true')
+      span.sr-only Previous
+    a.carousel-control-next(href='#carousel' role='button' data-slide='next')
+      span.carousel-control-next-icon(aria-hidden='true')
+      span.sr-only Next
+  section.search.container-fluid
+    .container
+      .row.align-items-center.justify-content-between.py-4.search__line
+        .col-12.col-lg-auto.col-xl-2
+          h2.search__title
+            span Find Your
+            span Holydays
+        form.col-12.col-lg-10.search__form
+          .row.justify-content-center.justify-content-sm-start.justify-content-md-center.justify-content-lg-between.align-items-end.align-items-md-stretch
+            .col-auto.col-sm.row.align-items-center.justify-content-center.justify-content-sm-start.justify-content-md-end.pl-md-0.pl-lg-3
+              .col-11.col-sm-auto.pl-mb-3
+                label.search__label-prepend(for="destination") Where 
+              .col-11.col-sm-12.col-md-8.pr-sm-0.pr-sm-3.px-md-0.px-md-3.col-xl-9 
+                .input-group.date
+                  input#destination.form-control.pr-0.search__destination(placeholder="destination", name="destination", type="text")
+                  label.input-group-append.mb-0(for="destination")
+                    .input-group-text
+                      i.icon-globe
+            .col-auto.col-sm.row.align-items-center.justify-content-center.justify-content-sm-start.justify-content-md-end.mt-3.mt-sm-0.pl-md-0.pl-lg-3
+              .col-11.col-sm-auto.pl-mb-3
+                label.search__label-prepend( data-target="#datetimepicker", data-toggle="datetimepicker" ) When 
+              .col-11.col-sm-12.col-md-8.col-xl-9.pr-sm-0.pr-sm-3.px-md-0.px-xl-3 
+                #datetimepicker.input-group.date(data-target-input="nearest")
+                  input.form-control.pr-0.search__date-time.datetimepicker-input(placeholder="select date", name="date", type="text", data-toggle="datetimepicker", data-target="#datetimepicker",autocomplete="off")
+                  .input-group-append.mb-0(data-target="#datetimepicker", data-toggle="datetimepicker")
+                    .input-group-text
+                      i.icon-calendar
+            .col-12.col-sm-auto.text-center.mt-3.mt-sm-0
+              button.btn(type="submit") Search

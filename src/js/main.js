@@ -1,0 +1,4 @@
+import '../local_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+$(function () {
+    $(`#datetimepicker`).datetimepicker()
+})

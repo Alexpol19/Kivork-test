@@ -1,0 +1,42 @@
+@import "../utils/variables";
+
+@mixin media-tablet {
+
+    @media (max-width: $mediaWidthTablet) {
+        @content;
+    }
+}
+@mixin media-mobile {
+
+    @media (max-width: $mediaWidthMobile) {
+        @content;
+    }
+}
+
+@mixin media-tablet-horizontal {
+
+    @media (max-width: $mediaWidthTabletHorizontal) {
+        @content;
+    }
+}
+
+@mixin media-1200 {
+
+    @media (max-width: $mediaWidth1200) {
+        @content;
+    }
+}
+
+@mixin media-laptop {
+
+    @media (min-width: $mediaWidthLaptop) {
+        @content;
+    }
+}
+
+@mixin media-custom($width) {
+
+    @media (min-width: $width) {
+        @content;
+    }
+}

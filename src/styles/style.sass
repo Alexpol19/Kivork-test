@@ -1,0 +1,202 @@
+@import "../local_modules/bootstrap/dist/css/bootstrap.min.css";
+
+@import "utils/fonts.sass";
+
+@import "common/global";
+
+@import "common/header";
+
+@import "common/footer";
+
+.slider__slide
+    padding-top: 17.5rem
+    padding-bottom: 13.5rem
+    @include media-1200
+        padding-top: 16rem
+    @include media-tablet-horizontal
+        padding-top: 10rem
+        padding-bottom: 7rem
+        display: flex
+        flex-direction: column
+        align-items: center
+    @include media-tablet
+        padding-top: 6rem
+        padding-bottom: 5rem
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, 0.349)
+        z-index: -1
+    img
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: auto
+        z-index: -2
+        @include media-mobile
+            height: 100%
+    h2
+        font-size: 3.1rem
+        color: rgb(255, 255, 255)
+        font-weight: bold
+        text-transform: uppercase
+        line-height: 1
+        text-align: center
+        @include media-mobile
+            font-size: 1.8rem
+    p
+        font-size: 1.55rem
+        color: rgb(255, 255, 255)
+        line-height: 1
+        text-align: center
+        font-weight: 500
+        @include media-tablet-horizontal
+            width: 70%
+            line-height: 1.2
+        @include media-mobile
+            font-size: 1.3rem
+    button
+        background-color: rgb(29, 210, 175)
+        font-size: 1.25rem
+        color: rgb(255, 255, 255)
+        line-height: 1
+        border-radius: 0
+        box-shadow: none
+        padding: 1.1rem 1.15rem
+        text-transform: uppercase
+        border: 2px solid rgb(29, 210, 175)
+        border-radius: 4px
+        box-sizing: border-box
+        margin-left: 0.9rem
+        margin-right: 0.9rem
+        &:hover
+            color: rgb(255, 255, 255)
+        &:focus 
+            box-shadow: none
+        &:last-child
+            background-color: transparent
+            border: 2px solid #fff
+        @include media-mobile
+            padding: 0.7rem 0.75rem;
+            font-size: 1rem
+            margin-left: 0.5rem
+            margin-right: 0.5rem
+.search
+    background-color: #5e6b78
+.search__line
+    position: relative
+    &:after 
+        content: ''
+        position: absolute
+        top: 0
+        left: 10.8rem
+        width: 1px
+        background-color: rgb(65, 85, 105);
+        height: 100%
+    &:before 
+        content: ''
+        position: absolute
+        top: calc(50% - 0.8rem)
+        left: 10.4rem
+        z-index: 1
+        height: 0.8rem
+        width: 0.8rem
+        background-color: #5e6b78
+        border-right: 1px solid  rgb(65, 85, 105)
+        border-top: 1px solid  rgb(65, 85, 105)
+        transform: rotate(45deg)
+    @include media-1200
+        &:after 
+            left: 9.4rem
+        &:before 
+            left: 9rem
+    @include media-tablet-horizontal
+        &:after 
+            display: none
+        &:before 
+            display: none
+form.search__form
+    .search__label-prepend
+        font-size: 1.35rem
+        font-weight: 300
+        color: rgb(159, 176, 192)
+        line-height: 1
+        margin-bottom: 0
+        @include media-tablet-horizontal
+            font-size: 1.2rem
+    .input-group
+        border-style: solid
+        border-width: 1px
+        border-color: rgb(25, 36, 46)
+        background-color: rgb(255, 255, 255)
+        .input-group-text
+            background: none
+            border: none
+            font-size: 1.5rem
+            color: rgb(164, 164, 164)
+            cursor: pointer
+            margin-bottom: 0
+            @include media-tablet-horizontal
+                padding: 0
+        input
+            font-size: 1.15rem
+            font-weight: normal
+            color: rgb(138, 138, 138)
+            line-height: 1
+            border: none
+            padding: 0.73rem 1.3rem
+            height: auto
+            @include media-1200
+                padding: 0.73rem 0.5rem
+                font-size: 1rem
+            &:focus
+                outline: none
+                box-shadow: none
+    button
+        background-color: rgb(29, 210, 175)
+        font-size: 1.25rem
+        color: rgb(255, 255, 255)
+        line-height: 1
+        border-radius: 0
+        box-shadow: none
+        padding: 0.85rem 1.4rem
+        @include media-tablet-horizontal
+            padding: 0.8rem 0.7rem
+            font-size: 1rem
+        &:hover
+            color: rgb(255, 255, 255)
+        &:focus 
+            box-shadow: none
+
+.search__title
+    margin-bottom: 0
+    @include media-tablet-horizontal
+        margin-bottom: 0.6rem
+    @include media-tablet
+        text-align: center
+    span
+        display: block
+        text-transform: uppercase
+        line-height: 1.2
+        &:first-of-type
+            font-size: 1.25rem
+            font-weight: normal
+            color: rgb(159, 176, 192)
+        &:last-child
+            font-size: 1.55rem
+            font-weight: 500
+            color: #fff
+        @include media-tablet-horizontal
+            display: inline-block
+            padding-right: 0.5rem
+            &:first-of-type
+                font-weight: normal
+                color: rgb(159, 176, 192)
+            &:last-child
+                font-size: 1.25rem
+                color:  rgb(159, 176, 192)
