@@ -14,4 +14,4 @@ reports/
 src/bootstrap-4.5.2
 
 # Папка с собранными файлами проекта
-# build/
+build/
