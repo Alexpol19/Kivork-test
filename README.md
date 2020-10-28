@@ -1,6 +1,6 @@
 # Voyage - KIVORK test project bootstrapped on Pug, Sass, Bootstrap4
 
-#### You can see demo here [demo](https://github.com/Alexpol19/Kivork-test/blob/main/build/index.html)
+#### You can see demo here [demo](https://alexpol19.github.io/Kivork-test/)
 
 ## How to install
 ### In the project directory you can run
